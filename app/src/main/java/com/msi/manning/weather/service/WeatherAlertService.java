@@ -46,7 +46,7 @@ public class WeatherAlertService extends Service {
     private static final String LOC = "LOC";
     private static final String ZIP = "ZIP";
     private static final long ALERT_QUIET_PERIOD = 10000;
-    private static final long ALERT_POLL_INTERVAL = 1500;
+    private static final long ALERT_POLL_INTERVAL = 15000;
 
     // convenience for Activity classes in the same process to get current device location
     // (so they don't have to repeat all the LocationManager and provider stuff locally)
@@ -103,7 +103,7 @@ public class WeatherAlertService extends Service {
     public void onCreate() {
         dbHelper = new DBHelper(this);
         timer = new Timer();
-        timer.schedule(task, 500, WeatherAlertService.ALERT_POLL_INTERVAL);
+        timer.schedule(task, 1500, WeatherAlertService.ALERT_POLL_INTERVAL);
         nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
     }
 

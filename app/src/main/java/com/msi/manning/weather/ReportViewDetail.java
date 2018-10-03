@@ -94,7 +94,7 @@ public class ReportViewDetail extends Activity {
                 forecast.setText(fore.toString());
                 String resPath = "com.msi.manning.weather:drawable/" + "cond" + report.getCondition().getId();
                 int resId = getResources().getIdentifier(resPath, null, null);
-                conditionImage.setImageDrawable(getResources().getDrawable(resId));
+               // conditionImage.setImageDrawable(getResources().getDrawable(resId));
             }
         }
     };

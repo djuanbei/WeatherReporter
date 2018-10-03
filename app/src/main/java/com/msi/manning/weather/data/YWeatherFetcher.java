@@ -47,6 +47,9 @@ public class YWeatherFetcher {
     }
 
     public WeatherRecord getWeather() {
+
+        return getMockRecord();
+        /*
         // /long start = System.currentTimeMillis();
         WeatherRecord r = new WeatherRecord();
 
@@ -70,6 +73,7 @@ public class YWeatherFetcher {
         // /Log.v(Constants.LOGTAG, " " + CLASSTAG + " call duration - " + duration);
         // /Log.v(Constants.LOGTAG, " " + CLASSTAG + " WeatherReport = " + r);
         return r;
+        */
     }
 
     private boolean isNumeric(String s) {
